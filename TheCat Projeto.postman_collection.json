@@ -95,7 +95,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/setup/loadSetup/:loadCategories/:loadBreeds",
+					"raw": "http://localhost:3000/setup/loadSetup",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -103,19 +103,7 @@
 					"port": "3000",
 					"path": [
 						"setup",
-						"loadSetup",
-						":loadCategories",
-						":loadBreeds"
-					],
-					"variable": [
-						{
-							"key": "loadCategories",
-							"value": null
-						},
-						{
-							"key": "loadBreeds",
-							"value": null
-						}
+						"loadSetup"
 					]
 				}
 			},

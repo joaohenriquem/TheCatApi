@@ -16,7 +16,7 @@ export class CatsComponent implements OnInit{
   emptyResult = false;
   catsBreeds: any;
   filteredAccessories!: string;
-  seasons: string[] = ['Sem acessórios', 'Com chapéu', 'Com óculos'];
+  categories: string[] = ['Sem acessórios', 'Com chapéu', 'Com óculos'];
 
   public dataSource = new MatTableDataSource<any>();
 
