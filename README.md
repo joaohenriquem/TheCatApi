@@ -66,6 +66,7 @@ pm2 show NUMERO
 
 ### Monitorando aplicações KeyMetrics
 pm2 link 25mgcdcoevwf90d y3l0z6lk0fw81ek - teste
+https://app.pm2.io/
 
 
 ### Tecnologias utilizadas
