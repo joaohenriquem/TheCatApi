@@ -78,6 +78,14 @@ https://app.pm2.io/
 - Bcrypt.
 - Jsonwebtoken.
 
+### Print das telas
+
+Login - ![image](https://user-images.githubusercontent.com/19335859/210930102-831328d6-0dd2-44e6-822a-8df7742665d4.png)
+
+Criar usuario - ![image](https://user-images.githubusercontent.com/19335859/210930074-f4318fc4-0d09-4382-8058-d4d1e5af31c4.png)
+
+Dashboard - ![image](https://user-images.githubusercontent.com/19335859/210930185-32b6987f-21c5-48e0-8953-98220bbaee99.png)
+
 
 
 
