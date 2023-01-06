@@ -4,15 +4,19 @@ import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { ListCatsBreeds } from 'src/app/interfaces/listCatsBreeds';
 
+
 @Component({
   selector: 'app-cats',
   templateUrl: './cats.component.html',
   styleUrls: ['./cats.component.scss']
 })
+
 export class CatsComponent implements OnInit{
   loading = false;
   emptyResult = false;
   catsBreeds: any;
+  filteredAccessories!: string;
+  seasons: string[] = ['Sem acessórios', 'Com chapéu', 'Com óculos'];
 
   public dataSource = new MatTableDataSource<any>();
 
