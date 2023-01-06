@@ -42,6 +42,7 @@ module.exports = class CatsController {
         };
       });
       const result = newArray.filter((item) => item.breed.id.includes(id))
+      console.log(result)
       res.status(200).json({ result });
     });
   }

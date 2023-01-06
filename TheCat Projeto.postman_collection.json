@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "78a72277-a570-415a-bb13-09c4c70faedc",
+		"name": "TheCat Projeto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4825628"
+	},
+	"item": [
+		{
+			"name": "ListBreeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cats/listBreeds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"listBreeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListInfoByBreeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cats/listInfoByBreeds/abys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"listInfoByBreeds",
+						"abys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListInfoByTemperament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cats/listInfoByTemperament/Active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"listInfoByTemperament",
+						"Active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListInfoByOrigin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cats/listInfoByOrigin/Un",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"listInfoByOrigin",
+						"Un"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoadSetup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/setup/loadSetup/:loadCategories/:loadBreeds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"setup",
+						"loadSetup",
+						":loadCategories",
+						":loadBreeds"
+					],
+					"variable": [
+						{
+							"key": "loadCategories",
+							"value": null
+						},
+						{
+							"key": "loadBreeds",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

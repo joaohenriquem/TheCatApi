@@ -1,14 +1,14 @@
 const mongoose = require("mongoose")
 
-const dbUser = process.env.DB_USER;
-const dbPassword = process.env.DB_PASS;
+let dbUser = process.env.DB_USER ?? 'acesso_dados'
+const dbPassword = process.env.DB_PASS ?? 'MBg5pYhiLo8F7C2U'
 
 const connect = () => {
 
     mongoose.set('strictQuery', true)
 
     let connString = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.lh9ar21.mongodb.net/TheCat`
-    
+
     mongoose.connect(connString)
 
     console.error(connString)

@@ -37,7 +37,7 @@ module.exports = class LoginController {
     }
 
     try {
-      const secret = process.env.SECRET;
+      const secret = process.env.SECRET ?? 'secret_autenticacao';
       const token = jwt.sign({ id: user._id }, secret);
       res.status(200).json({ message: "Autenticação realizada com sucesso!", token });
     } catch (error) {

@@ -15,7 +15,7 @@ function validateToken(req, res, next) {
   }
 
   try {
-    const secret = process.env.SECRET;
+    const secret = process.env.SECRET ?? 'secret_autenticacao';
     jwt.verify(token, secret);
     next();
   } catch (error) {
