@@ -90,6 +90,6 @@ Metricas - ![image](https://user-images.githubusercontent.com/19335859/210930287
 
 Swagger - ![image](https://user-images.githubusercontent.com/19335859/210930338-c1da36db-75f6-45fd-959a-0bf0ef1f95ac.png)
 
-Mongo Atlas - ![image](https://user-images.githubusercontent.com/19335859/210930740-5415a1e3-0499-4038-9fc9-f952a208f83e.png)
+Mongo Atlas - ![image](https://user-images.githubusercontent.com/19335859/211083042-e8daa4c2-2b51-4b20-a180-946257192596.png)
 
 
