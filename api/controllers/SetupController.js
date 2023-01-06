@@ -8,8 +8,7 @@ module.exports = class SetupController {
 
   static async loadSetup(req, res) {
 
-    if (req.params.loadCategories == 'true') {
-      //Carga das catergorias das raças
+      //Carga das categorias das raças
       try {
         axios.get(process.env.URL_THE_CAT_API + 'v1/categories', { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
           .then(function (response) {
@@ -21,10 +20,11 @@ module.exports = class SetupController {
                 }
               });
               const categry = CatsCategories.findById(category.id)
-              if(!categry){
-                catsCategories.save();
-              }
-            })
+
+              if (!categry) {
+                catsCategoriessave();
+
+              })
             console.log("Upload cat categories successful!")
           })
           .catch(function (error) {
@@ -33,7 +33,6 @@ module.exports = class SetupController {
       } catch (error) {
         console.log(`Error=> ${error}`);
       }
-    }
 
     //Carga das raças
     try {
@@ -52,10 +51,9 @@ module.exports = class SetupController {
 
             const cat = CatsBreed.findById(breed.id)
 
-            if(!cat){
+            if (!cat)
               catsBreed.save()
-            }
-            
+
             setTimeout(() => {
               try {
                 axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&size=small&page=0&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
@@ -72,7 +70,57 @@ module.exports = class SetupController {
                         }
                       });
                       catsImages.save();
-                      console.log("Upload images cat with hat successful!")
+                      console.log("Upload images by breed successful.")
+                    });
+                  });
+              } catch (error) {
+                console.log(`Error=> ${error}`);
+              }
+            }, 1000);
+
+            //Carga das imagens com chapeu
+            setTimeout(() => {
+              try {
+                axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&order=Random&size=small&page=0&category_ids=1&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
+                  .then(function (response) {
+                    response.data.forEach(function (image, i) {
+                      const catsImages = new CatsImage({
+                        catImage: {
+                          breed: breed.id,
+                          categories: 1,
+                          id: image.id,
+                          url: image.url,
+                          width: image.width,
+                          height: image.height
+                        }
+                      });
+                      catsImages.save();
+                      console.log("Upload images with hat successful.")
+                    });
+                  });
+              } catch (error) {
+                console.log(`Error=> ${error}`);
+              }
+            }, 1000);
+
+               //Carga das imagens com oculos de sol
+             setTimeout(() => {
+              try {
+                axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&order=Random&size=small&page=0&category_ids=4&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
+                  .then(function (response) {
+                    response.data.forEach(function (image, i) {
+                      const catsImages = new CatsImage({
+                        catImage: {
+                          breed: breed.id,
+                          categories: 1,
+                          id: image.id,
+                          url: image.url,
+                          width: image.width,
+                          height: image.height
+                        }
+                      });
+                      catsImages.save();
+                      console.log("Upload images with sunglasses successful.")
                     });
                   });
               } catch (error) {
