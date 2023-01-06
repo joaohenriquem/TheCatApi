@@ -1,0 +1,31 @@
+<div class="container">
+
+    <app-card-view>
+
+        <div *ngIf="!loading">
+            <br>
+            <label class="mat-label"><strong>Encontrar Raça:</strong></label>
+            <input matInput placeholder="Pesquisar raça por origem" (keyup)="applyFilter($event)" appInputWidth />
+        </div>
+
+        <div class="center custom-position">
+            <mat-spinner *ngIf="loading"></mat-spinner>
+        </div>
+        <mat-grid-list cols="3" rowHeight="1:1">
+
+            <mat-grid-tile *ngFor="let breed of catsBreeds">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>{{breed.name}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-lg-image matTooltip={{breed.id}} src='{{breed.image}}' alt='No image'>
+                    <mat-card-content matTooltip={{breed.description}}>
+                        <b>Description:</b> {{breed.description.substr(0,120) + '...'}}
+                        <br>
+                        <b>Origin:</b> {{breed.origin}}
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </app-card-view>
+</div>
