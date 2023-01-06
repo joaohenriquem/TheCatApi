@@ -21,7 +21,7 @@ module.exports = class SetupController {
               });
               const categry = CatsCategories.findById(category.id)
 
-              if (!categry) {
+              if (!categry) 
                 catsCategoriessave();
 
               })
@@ -103,7 +103,7 @@ module.exports = class SetupController {
               }
             }, 1000);
 
-               //Carga das imagens com oculos de sol
+               //Carga das imagens com oculos
              setTimeout(() => {
               try {
                 axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&order=Random&size=small&page=0&category_ids=4&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
