@@ -86,6 +86,9 @@ Criar usuario - ![image](https://user-images.githubusercontent.com/19335859/2109
 
 Dashboard - ![image](https://user-images.githubusercontent.com/19335859/210930185-32b6987f-21c5-48e0-8953-98220bbaee99.png)
 
+Metricas - ![image](https://user-images.githubusercontent.com/19335859/210930287-d66d5c53-3ad2-4e0c-97fb-2022eb517f64.png)
+
+Swagger - ![image](https://user-images.githubusercontent.com/19335859/210930338-c1da36db-75f6-45fd-959a-0bf0ef1f95ac.png)
 
 
 
