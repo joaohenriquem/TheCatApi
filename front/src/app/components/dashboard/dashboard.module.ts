@@ -20,6 +20,7 @@ import { CatsComponent } from './cats/cats.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list'; 
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatRadioModule} from '@angular/material/radio';
 
 registerLocaleData(localePt, 'pt')
 
@@ -54,7 +55,8 @@ export const CustomCurrencyMaskConfig = {
     CurrencyMaskModule,
     MatCardModule,
     MatGridListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatRadioModule
   ],
   providers: [
     {

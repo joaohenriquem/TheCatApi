@@ -21,7 +21,7 @@ module.exports = class SetupController {
               });
               const categry = CatsCategories.findById(category.id)
 
-              if (!categry) {
+              if (!categry) 
                 catsCategoriessave();
 
               })
@@ -54,7 +54,7 @@ module.exports = class SetupController {
             if (!cat)
               catsBreed.save()
 
-            setTimeout(() => {
+            /*setTimeout(() => {
               try {
                 axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&size=small&page=0&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
                   .then(function (response) {
@@ -76,10 +76,10 @@ module.exports = class SetupController {
               } catch (error) {
                 console.log(`Error=> ${error}`);
               }
-            }, 1000);
+            }, 1000);*/
 
             //Carga das imagens com chapeu
-            setTimeout(() => {
+            /*setTimeout(() => {
               try {
                 axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&order=Random&size=small&page=0&category_ids=1&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
                   .then(function (response) {
@@ -101,9 +101,9 @@ module.exports = class SetupController {
               } catch (error) {
                 console.log(`Error=> ${error}`);
               }
-            }, 1000);
+            }, 2000);*/
 
-               //Carga das imagens com oculos de sol
+               //Carga das imagens com oculos
              setTimeout(() => {
               try {
                 axios.get(`${process.env.URL_THE_CAT_API}v1/images/search?limit=3&order=Random&size=small&page=0&category_ids=4&breed_ids=${breed.id}`, { headers: { 'x-api-key': process.env.TOKEN_THE_CAT_API } })
@@ -126,7 +126,7 @@ module.exports = class SetupController {
               } catch (error) {
                 console.log(`Error=> ${error}`);
               }
-            }, 1000);
+            }, 2000);
 
           })
           console.log("Upload cat breeds successful!")

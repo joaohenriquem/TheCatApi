@@ -6,11 +6,19 @@
             <br>
             <label class="mat-label"><strong>Encontrar Raça:</strong></label>
             <input matInput placeholder="Pesquisar raça por origem" (keyup)="applyFilter($event)" appInputWidth />
+
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                [(ngModel)]="filteredAccessories">
+                <mat-radio-button class="example-radio-button" *ngFor="let cat of categories" [value]="cat">
+                    {{cat}}
+                </mat-radio-button>
+            </mat-radio-group>
         </div>
 
         <div class="center custom-position">
             <mat-spinner *ngIf="loading"></mat-spinner>
         </div>
+        
         <mat-grid-list cols="3" rowHeight="1:1">
 
             <mat-grid-tile *ngFor="let breed of catsBreeds">

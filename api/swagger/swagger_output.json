@@ -222,23 +222,10 @@
         }
       }
     },
-    "/setup/loadSetup/{loadCategories}/{loadBreeds}": {
+    "/setup/loadSetup": {
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "loadCategories",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "loadBreeds",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
